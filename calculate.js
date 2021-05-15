@@ -19,5 +19,10 @@ function calculate(){
     let rYardage = parseInt(document.getElementById("ratedTeeYards").value);
     let rSlope = parseInt(document.getElementById("ratedTeeSlope").value);
     let rCR = parseFloat(document.getElementById("ratedTeeCR").value);
+    
     let yardDiff = uYardage - rYardage;
+
+    let slopeAdd = findSlopeDiff(yardDiff);
+    let CRAdd = findCRDiff(yardDiff);
+
 }
