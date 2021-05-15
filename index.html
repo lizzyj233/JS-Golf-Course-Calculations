@@ -1,0 +1,67 @@
+<!--This project is going to calculate the slope and rating for unrated women's tees. For example, many golf courses do not have the gold or white (senior/mens) tees rated for a woman playing from them. As a woman golfer, I am tired of manually calculting this. Let's make it easier!
+
+Copyright 2021 Liz Joan Loftus
+
+The project will work like so:
+    The golfer will be asked to choose whether they played 18 or 9 holes. - input A
+    The golfer will be asked to input the yardage of unrated tees. - input B
+    The golfer will input the yardage of the rated women's tees. - input C
+    A lookup will be performed to get the difference to add from the reference table. - function
+    The slope and rating to use is presented to the user. - output A
+
+    Future enhancement ideas:
+        Perform an http get to pull in the ratings from the NCRDB
+        Put the reference table in a json, perform lookup via JSON
+        Add course handicap calculator
+        Pre-load several local courses for quick reference on site load
+    
+    Future related project ideas:
+        Course stats tracker
+-->
+
+<html>
+    <head>
+        <title>Unrated Tees Calculator</title>
+    </head>
+<body>
+    <h1>Calculate the slope and rating for your unrated tees.</h1>
+    <p>The goal of this project is to make it easier for women to calculate the slope & rating of tees that are not rated for women. We like a challenge, lets rate those tees!</p>
+    <br>
+    <table id="getData">
+        <tr>
+            <td>What course did you play?</td>
+            <td>
+                <input type="text" id="course">
+            </td>
+        </tr>
+        <tr>
+            <td>What tees did you play?</td>
+            <td>
+                <input type="text" id="tees">
+            </td>
+        </tr>
+        <tr>
+            <td>How many holes did you play?</td>
+            <td>
+                <input type="radio" id="_9Holes" name="holes" value="9">
+                <label for="_9Holes">9 Holes</label>
+                <input type="radio" id="_18Holes" name="holes" value="18">
+                <label for="_18Holes">18 Holes</label>
+            </td>
+        </tr>
+        <tr>
+            <td>What is the yardage of the <strong>unrated</strong> tees?</td>
+            <td>
+                <input type="number" id="unratedTeeYards" max="10000">
+            </td>
+        </tr>
+        <tr>
+            <td>What is the yardage of the <strong>rated</strong> tees?</td>
+            <td>
+                <input type="number" id="ratedTeeYards" max="10000">
+            </td>
+        </tr>
+    </table>
+    <p id="result" style="display: none;"></p>
+</body>
+</html>
