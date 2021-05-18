@@ -6,7 +6,8 @@ calcButton.addEventListener("click", (e)=> {
         calculate();
     }
     catch(error){
-        console.log("Incomplete Form");
+        document.getElementById("result").innerHTML = "Incomplete Form.";
+        document.getElementById("result").style.display = "block";
     } 
     e.preventDefault();
 });
@@ -22,7 +23,10 @@ function calculate(){
     
     let yardDiff = uYardage - rYardage;
 
-    let slopeAdd = findSlopeDiff(yardDiff);
-    let CRAdd = findCRDiff(yardDiff);
+    let slopeAdd = (findSlopeDiff(yardDiff));
+    //let CRAdd = findCRDiff(yardDiff);
+
+    document.getElementById("result").innerHTML = `The adjusted slope is ${slopeAdd + rSlope}.<br> The adjusted course rating is TBD`;
+    document.getElementById("result").style.display = "block";
 
 }
