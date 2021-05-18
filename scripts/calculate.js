@@ -26,7 +26,7 @@ function calculate(){
     let slopeAdd = (findSlopeDiff(yardDiff));
     //let CRAdd = findCRDiff(yardDiff);
 
-    document.getElementById("result").innerHTML = `The adjusted slope is ${slopeAdd + rSlope}.<br> The adjusted course rating is TBD`;
+    document.getElementById("result").innerHTML = `The adjusted slope for ${course} is ${slopeAdd + rSlope}.<br> The adjusted course rating is TBD`;
     document.getElementById("result").style.display = "block";
 
 }
