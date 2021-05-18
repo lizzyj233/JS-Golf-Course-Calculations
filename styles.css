@@ -1,0 +1,48 @@
+body{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color:chocolate;
+    color:oldlace;
+}
+
+table{
+    padding: 1%;
+    color:sienna;
+}
+
+.adj-calc-div{
+    padding: 2%;
+    width: auto;
+    background-color:oldlace;
+}
+
+.result{
+    position:relative;
+    width: auto;
+    padding: 1%;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    background-color: sienna;
+    color: oldlace;
+    text-align: center;
+}
+
+.button{
+    position: relative;
+    padding: .5%;
+    background-color:chocolate;
+    color:oldlace;
+    border-color:sienna;
+    border-style: outset;
+    font-size:small;
+}
+.button:hover{
+    position: relative;
+    padding: .5%;
+    background-color: sienna;
+    color:oldlace;
+    border-color: chocolate;
+    border-style: inset;
+    font-size:small;
+}

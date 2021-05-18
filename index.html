@@ -25,60 +25,63 @@ The project will work like so:
 <html>
     <head>
         <title>Unrated Tees Calculator</title>
+        <link href="styles.css" rel="stylesheet">
     </head>
 <body>
     <h1>Calculate the slope and rating for your unrated women's tees.</h1>
-    <p>The goal of this project is to make it easier for women to calculate the slope & rating of tees that are not rated for women. We like a challenge, lets rate those tees!</p>
+    <p>The goal of this project is to make it easier for women to calculate the slope & rating of tees that are not rated for women. We like a challenge, let's rate those tees!</p>
     <br>
-    <table id="getData">
-        <tr>
-            <td>What course did you play?</td>
-            <td>
-                <input type="text" id="course">
-            </td>
-        </tr>
-        <tr>
-            <td>What tees did you play?</td>
-            <td>
-                <input type="text" id="tees">
-            </td>
-        </tr>
-        <tr>
-            <td>How many holes did you play?</td>
-            <td>
-                <input type="radio" name="holes" value="9">
-                <label for="_9Holes">9 Holes</label>
-                <input type="radio" name="holes" value="18">
-                <label for="_18Holes">18 Holes</label>
-            </td>
-        </tr>
-        <tr>
-            <td>What is the yardage of the <strong>unrated</strong> tees?</td>
-            <td>
-                <input type="number" id="unratedTeeYards" max="10000">
-            </td>
-        </tr>
-        <tr>
-            <td>What is the yardage of the <strong>rated</strong> tees?</td>
-            <td>
-                <input type="number" id="ratedTeeYards" max="10000">
-            </td>
-        </tr>
-        <tr>
-            <td>What is the slope of the <strong>rated</strong> tees?</td>
-            <td>
-                <input type="number" id="ratedTeeSlope" max="200">
-            </td>
-        </tr>
-        <tr>
-            <td>What is the course rating of the <strong>rated</strong> tees?</td>
-            <td>
-                <input type="number" id="ratedTeeCR" max="90.0">
-            </td>
-        </tr>
-    </table>
-    <button id="calculate">Calculate</button>
-    <p id="result" style="display: none;"></p>
+    <div class="adj-calc-div">
+        <table id="getData">
+            <tr>
+                <td>What course did you play?</td>
+                <td>
+                    <input type="text" id="course">
+                </td>
+            </tr>
+            <tr>
+                <td>What tees did you play?</td>
+                <td>
+                    <input type="text" id="tees">
+                </td>
+            </tr>
+            <tr>
+                <td>How many holes did you play?</td>
+                <td>
+                    <input type="radio" name="holes" value="9">
+                    <label for="_9Holes">9 Holes</label>
+                    <input type="radio" name="holes" value="18">
+                    <label for="_18Holes">18 Holes</label>
+                </td>
+            </tr>
+            <tr>
+                <td>What is the yardage of the <strong>unrated</strong> tees?</td>
+                <td>
+                    <input type="number" id="unratedTeeYards" max="10000">
+                </td>
+            </tr>
+            <tr>
+                <td>What is the yardage of the <strong>rated</strong> tees?</td>
+                <td>
+                    <input type="number" id="ratedTeeYards" max="10000">
+                </td>
+            </tr>
+            <tr>
+                <td>What is the slope of the <strong>rated</strong> tees?</td>
+                <td>
+                    <input type="number" id="ratedTeeSlope" max="200">
+                </td>
+            </tr>
+            <tr>
+                <td>What is the course rating of the <strong>rated</strong> tees?</td>
+                <td>
+                    <input type="number" id="ratedTeeCR" max="90.0">
+                </td>
+            </tr>
+        </table>
+        <button id="calculate" class="button">Calculate</button>
+        <p id="result" class="result" style="display: none;"></p>
+    </div>
 </body>
 <script src="scripts/calculate.js"></script>
 <script src="scripts/lookup.js"></script>
