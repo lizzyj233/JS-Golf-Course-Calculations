@@ -4,54 +4,50 @@
 function findSlopeDiff(yardDiff){    
     if(yardDiff <= 44){
         return 0;
-    }
-    else if(yardDiff > 44 && yardDiff <= 134){
+    } else if(yardDiff > 44 && yardDiff <= 134){
         return 1;
-    }
-    else if(yardDiff > 134 && yardDiff <= 224){
+    } else if(yardDiff > 134 && yardDiff <= 224){
         return 2;
-    }
-    else if(yardDiff > 224 && yardDiff <= 296){
+    } else if(yardDiff > 224 && yardDiff <= 296){
         return 3;
-    }
-    else if(yardDiff > 296 && yardDiff <= 386){
+    } else if(yardDiff > 296 && yardDiff <= 386){
         return 4;
-    }
-    else if(yardDiff > 386 && yardDiff <= 476){
+    } else if(yardDiff > 386 && yardDiff <= 476){
         return 5;
-    }
-    else if(yardDiff > 476 && yardDiff <= 548){
+    } else if(yardDiff > 476 && yardDiff <= 548){
         return 6;
-    }
-    else if(yardDiff > 548 && yardDiff <= 638){
+    } else if(yardDiff > 548 && yardDiff <= 638){
         return 7;
-    }
-    else if(yardDiff > 638 && yardDiff <= 728){
+    } else if(yardDiff > 638 && yardDiff <= 728){
         return 8;
-    }
-    else if(yardDiff > 728 && yardDiff <= 800){
+    } else if(yardDiff > 728 && yardDiff <= 800){
         return 9;
-    }
-    else if(yardDiff > 800 && yardDiff <= 890){
+    } else if(yardDiff > 800 && yardDiff <= 890){
         return 10;
-    }
-    else if(yardDiff > 890 && yardDiff <= 980){
+    } else if(yardDiff > 890 && yardDiff <= 980){
         return 11;
-    }
-    else if(yardDiff > 980 && yardDiff <= 1052){
+    } else if(yardDiff > 980 && yardDiff <= 1052){
         return 12;
-    }
-    else if(yardDiff > 1052 && yardDiff <= 1142){
+    } else if(yardDiff > 1052 && yardDiff <= 1142){
         return 13;
-    }
-    else if(yardDiff > 1142 && yardDiff <= 1232){
+    } else if(yardDiff > 1142 && yardDiff <= 1232){
         return 14;
-    }
-    else{
+    } else{
         return 15;
     }
 }
 
 function findCRDiff(yardDiff){
-    
+    let x = 0.0;
+    let low = 0;
+    let high = 8;
+
+    do {
+        if(yardDiff >= low && yardDiff <= high){
+            return x.toFixed(1);
+        }   
+        x += 0.1
+        low += 9;
+        high += 18;
+    } while(yardDiff >= low);  
 }

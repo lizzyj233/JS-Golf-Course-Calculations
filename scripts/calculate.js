@@ -24,9 +24,10 @@ function calculate(){
     let yardDiff = uYardage - rYardage;
 
     let slopeAdd = (findSlopeDiff(yardDiff));
-    //let CRAdd = findCRDiff(yardDiff);
+    let CRAdd = findCRDiff(yardDiff);
+        CRAdd = parseFloat(CRAdd);
 
-    document.getElementById("result").innerHTML = `The adjusted slope for ${course} is ${slopeAdd + rSlope}.<br> The adjusted course rating is TBD`;
+    document.getElementById("result").innerHTML = `The yardage difference is <strong>${yardDiff} yards.</strong> <br><br>The adjusted slope for ${course} is <strong>${slopeAdd + rSlope}</strong>.<br><br> The adjusted course rating is <strong>${(CRAdd + rCR).toFixed(1)}.</strong>`;
     document.getElementById("result").style.display = "block";
 
 }
